@@ -1,0 +1,10 @@
+#wrapper{
+    width: 700px;
+    height: auto;
+    background-color: black;
+}
+#logo{
+    color: blue;
+    width: 300px;
+    height: 200px;
+}
