@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title> Il Covo Ristorante and Lounge</title>
+        <link rel="stylesheet" type="text/css" href="../stylesheets/homestyle.css">
+        <link rel="stylesheet" type="text/css" href="../stylesheets/bootstrap.css">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+      
+        <script type="text/javascript" src="../JavaScript/jquery.isotope.js"></script>
+        
+        
+
+        
+    </head>
+    <body>
+        <div class="container">
+
+           <div id="container">
+              <ul id="filters">
+                <li><a href="#" data-filter="*">show all</a></li>
+                <li><a href="#" data-filter=".metal">metal</a></li>
+                <li><a href="#" data-filter=".transition">transition</a></li>
+                <li><a href="#" data-filter=".alkali, .alkaline-earth">alkali and alkaline-earth</a></li>
+                <li><a href="#" data-filter=":not(.transition)">not transition</a></li>
+                <li><a href="#" data-filter=".metal:not(.transition)">metal but not transition</a></li>
+              </ul>
+              
+             <div class="element transition metal">...</div>
+             <div class="element post-transition metal">...</div>
+             <div class="element alkali metal">...</div>
+             <div class="element transition metal">...</div>
+             <div class="element lanthanoid metal inner-transition">...</div> 
+             <div class="element halogen nonmetal">...</div> 
+             <div class="element alkaline-earth metal">...</div>
+             ...
+           </div>
+           
+           // cache container
+           var $container = $('#container');
+           // initialize isotope
+           $container.isotope({
+             // options...
+           });
+
+           // filter items when filter link is clicked
+           $('#filters a').click(function(){
+             var selector = $(this).attr('data-filter');
+             $container.isotope({ filter: selector });
+             return false;
+           });
+
+
+
+           
+           
+           </div>
+    </body>
+</html>      
+            
+            
